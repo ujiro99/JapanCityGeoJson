@@ -5,7 +5,9 @@
   "scripts": {
     "japan": "$(npm bin)/geo2topo -o ./test.japan.topo.json -q 1e4 places.json",
     "city": "$(npm bin)/geo2topo -o ./test.city.topo.json -q 1e4 geojson/富山県/氷見市.json",
-    "pref": "$(npm bin)/geo2topo -o ./test.pref.topo.json -q 1e4 geojson/47都道府県/富山県.json"
+    "pref": "$(npm bin)/geo2topo -o ./test.pref.topo.json -q 1e4 geojson/47都道府県/富山県.json",
+    "merge": "$(npm bin)/topomerge 氷見市=氷見市 < topojson/富山県/氷見市.topojson > test.merge.topo.json ",
+    "mpref": "$(npm bin)/topomerge 三重県=三重県 -k d.id < topojson/47都道府県/三重県.topojson > test.merge-pref.topo.json "
   },
   "repository": {
     "type": "git",
